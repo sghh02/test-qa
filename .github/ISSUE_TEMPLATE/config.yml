@@ -3,6 +3,3 @@ contact_links:
   - name: 書き方の見本を見る
     url: https://github.com/sghh02/test-qa/issues/1
     about: 見本の Issue を開きます。これと同じように書いてください
-  - name: 起票先が分からない・ログインできない
-    url: https://github.com/sghh02/test-curriculum/blob/main/chapters/02-assets-and-tools.md
-    about: 教材「教材・Drive・GitHubの使い分け」を開きます。解決しない場合は講師へ連絡してください
