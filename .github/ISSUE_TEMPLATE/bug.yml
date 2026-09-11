@@ -1,0 +1,133 @@
+name: バグ報告
+description: テスト実施中に見つけた不具合を起票する
+title: "[結合テスト][ケースID][画面名] 事象を一行で"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        テスト実施中に見つけた不具合を起票します。
+
+        **件名（タイトル）の `ケースID` `画面名` `事象を一行で` は、必ず自分の内容に置き換えてください。**
+        単体テストの起票では、先頭を `[単体テスト]` に直してください。
+
+        書き方に迷ったら、教材の [再現できるバグ報告の書き方](https://github.com/sghh02/test-curriculum/blob/main/chapters/04-bug-report-basics.md) を見返してください。
+
+  - type: dropdown
+    id: test-type
+    attributes:
+      label: テスト種別
+      options:
+        - 結合テスト
+        - 単体テスト
+    validations:
+      required: true
+
+  - type: input
+    id: case-id
+    attributes:
+      label: ケースID
+      description: テストケースシートのケースIDをそのまま書いてください
+      placeholder: 例）支出-012
+    validations:
+      required: true
+
+  - type: input
+    id: screen
+    attributes:
+      label: 画面名
+      description: 設計書に書かれている画面名に合わせてください
+      placeholder: 例）支出入力画面
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 事象（何が起きたか）
+      description: 感想や推測ではなく、起きた事実だけを書いてください
+      placeholder: 例）金額に 0 を入力して保存すると、履歴一覧に金額が空欄で表示される
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 画面名・操作・入力値を省略せず、上から順に番号で書いてください
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待結果（本来どうあるべきか）
+      description: 設計書のどこを根拠にしたかも書けると、より伝わります
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の結果
+      description: 期待結果と並べて読んだときに、違いが分かるように書いてください
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 端末・OS
+      placeholder: 例）iPhone 15 / iOS 18.5
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: アプリバージョン
+      description: 「やりくり」の設定画面からバージョンを確認してください
+      placeholder: 例）1.2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      description: 進行不能なら高め、回避できるなら中以下が目安です
+      options:
+        - 高（先に進めない／データが壊れる）
+        - 中（回避できるが支障がある）
+        - 低（表示崩れ・軽微な誤り）
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: エビデンス・補足
+      description: スクリーンショットはこの欄へドラッグ＆ドロップで添付できます。Drive 側のエビデンス名も書いておくと、あとで照合できます。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: before-submit
+    attributes:
+      label: 起票前チェック
+      options:
+        - label: 件名のケースID・画面名・事象を、自分の内容に置き換えた
+          required: true
+        - label: 同じ不具合が既に起票されていないか、Issue 一覧を検索した
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        起票した**あとに**、発行された Issue 番号（`#12` のような番号）を
+        実施シートの `備考` 列へ書き戻してください。起票して終わりにはしません。
