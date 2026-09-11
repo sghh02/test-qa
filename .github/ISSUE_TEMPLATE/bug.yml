@@ -11,7 +11,7 @@ body:
         **件名（タイトル）の `ケースID` `画面名` `事象を一行で` は、必ず自分の内容に置き換えてください。**
         単体テストの起票では、先頭を `[単体テスト]` に直してください。
 
-        書き方に迷ったら、教材の [再現できるバグ報告の書き方](https://github.com/sghh02/test-curriculum/blob/main/chapters/04-bug-report-basics.md) を見返してください。
+        書き方に迷ったら、[プログラム管理アプリ](https://program-viewer.program-viewer.workers.dev/) の「テスト基礎」から `第6章: 再現できるバグ報告の書き方` を見返してください。
 
   - type: dropdown
     id: test-type
