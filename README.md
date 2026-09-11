@@ -37,8 +37,3 @@ GitHub アカウントでログインしていれば、そのまま起票でき�
 | `再現不可` | 手順どおりに操作しても再現しなかった |
 | `仕様どおり` | 不具合ではなく、設計書どおりの挙動だった |
 | `重複` | 既に起票されている内容だった |
-
-## 関連
-
-- 教材: [test-curriculum](https://github.com/sghh02/test-curriculum)
-- 書き方: [再現できるバグ報告の書き方](https://github.com/sghh02/test-curriculum/blob/main/chapters/04-bug-report-basics.md)
